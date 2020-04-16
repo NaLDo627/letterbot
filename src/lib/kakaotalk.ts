@@ -44,5 +44,5 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
     // ],
   });
 
-  await axios.post(url, message);
+  await axios.post(url, JSON.stringify(message) + "\r\n");
 };
