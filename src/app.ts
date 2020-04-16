@@ -2,6 +2,7 @@ import * as core from '@actions/core';
 import parser from './parser';
 import discord from './lib/discord';
 import slack from './lib/slack';
+import kakaotalk from './lib/kakaotalk';
 
 (async () => {
   const WEBHOOKS = process.env.WEBHOOKS;
@@ -22,6 +23,14 @@ import slack from './lib/slack';
       });
     } else if (url.includes('hooks.slack.com')) { //slack webhook
       await slack({
+        weather: parsed.weather,
+        news: parsed.news.slackContent,
+        date: parsed.date,
+
+        url,
+      })
+    } else if (url.includes('hkpark')) { //kakaotalk webhook
+      await kakaotalk({
         weather: parsed.weather,
         news: parsed.news.slackContent,
         date: parsed.date,
