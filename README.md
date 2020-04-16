@@ -1,5 +1,5 @@
 # 편지봇
-📨 Github Action 으로 만든 디스코드, 슬랙에 매일 아침 8시에 브리핑을 해주는 봇입니다
+📨 Github Action 으로 만든 디스코드, 슬랙에 매일 아침 8시에 브리핑을 해주는 봇입니다. cjaewon님의 저장소를 fork하여 카카오봇에서 활용가능하도록 해봤습니다.
 
 ![Node.js CI](https://github.com/cjaewon/letterbot/workflows/Node.js%20CI/badge.svg)
 ![cjaewon/letterbot License](https://img.shields.io/github/license/cjaewon/letterbot?color=blue)
