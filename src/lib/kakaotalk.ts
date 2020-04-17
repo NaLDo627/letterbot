@@ -20,8 +20,8 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
 
   message.messages.push({
     message: "날짜 / 한국\n" + `${today} ${date ? '(' + date + ')' : ''}` + 
-    "\n\n날씨 / 부산" + weather.weather +
-    "\n\n온도 / 부산" + weather.temp,
+    "\n\n날씨 / 성남\n" + weather.weather +
+    "\n\n온도 / 성남\n" + weather.temp,
     target_db_table: "",
     target_db_data_type: "",
 
