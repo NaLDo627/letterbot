@@ -17,11 +17,17 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
   let message: any = {
     messages: []
   };
+  
+  weatherMsg = "";
+  if(weather.cod != 200)
+    weatherMsg = "날씨를 이용할 수 없습니다.";
+  else
+    weatherMsg = "날짜 / 한국\n" + `${today} ${date ? '(' + date + ')' : ''}` + 
+    "\n\n날씨 / 성남\n" + weather.weather +
+    "\n\n온도 / 성남\n" + weather.temp;
 
   message.messages.push({
-    message: "날짜 / 한국\n" + `${today} ${date ? '(' + date + ')' : ''}` + 
-    "\n\n날씨 / 성남\n" + weather.weather +
-    "\n\n온도 / 성남\n" + weather.temp,
+    message: weatherMsg,
     target_db_table: "",
     target_db_data_type: "",
 
