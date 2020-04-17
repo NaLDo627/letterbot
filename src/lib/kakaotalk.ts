@@ -2,6 +2,7 @@ import axios from 'axios';
 
 interface kakaotalkArgs {
   weather: {
+    cod: number;
     weather: string;
     temp: string;
   };
