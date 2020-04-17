@@ -44,13 +44,14 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
     // ],
   });
 
-  await axios({
-    method: 'post',
-    url: url,
-    headers: {
-        'Content-Type': 'application/text'
-    },
-    data: JSON.stringify(message) + "\r\n",
-    timeout: 2000
-}).catch(function(e) { });
+//   await axios({
+//     method: 'post',
+//     url: url,
+//     headers: {
+//         'Content-Type': 'application/text'
+//     },
+//     data: JSON.stringify(message) + "\r\n",
+//     timeout: 2000
+// }).catch(function(e) { });
+  await axios.post(url, message);
 };
