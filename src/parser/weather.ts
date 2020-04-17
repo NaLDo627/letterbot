@@ -17,7 +17,7 @@ export const parse = async() => {
   return {
     cod: data.cod,
     weather: (<any> weatherData)[data.weather[0].id],
-    temp: `(${data.main.temp_min}도 ~ ${data.main.temp_max}도)`
+    temp: `(${data.main.temp_min}도 ~ ${data.main.temp_max}도)\n체감 온도 : ${data.main.feels_like}도`
   };
   
 //   return {
