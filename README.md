@@ -3,7 +3,6 @@
 
 ![Node.js CI](https://github.com/cjaewon/letterbot/workflows/Node.js%20CI/badge.svg)
 ![cjaewon/letterbot License](https://img.shields.io/github/license/cjaewon/letterbot?color=blue)
-![stars](https://img.shields.io/github/stars/cjaewon/letterbot?color=yellow&style=social)
 
 ### 사용 예시
 
