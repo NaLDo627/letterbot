@@ -15,6 +15,7 @@ export const parse = async() => {
   console.log('✅ 날씨 파싱 완료');
 
   return {
+    cod: data.cod,
     weather: (<any> weatherData)[data.weather[0].id],
     temp: `(${data.main.temp_min}도 ~ ${data.main.temp_max}도)`
   };
