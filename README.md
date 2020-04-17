@@ -36,3 +36,4 @@ https://webhooklinkexample4.letterbot
 
 그럼 인제 매일 아침 8시마다 디스코드 또는 슬랙에 메세지를 보내드립니다
 만약 시간을 수정하고 싶으시면 `.github/workflows/nodejs.yml` cron 시간을 변경하시면 됩니다 (UTC 기준입니다.)
+
