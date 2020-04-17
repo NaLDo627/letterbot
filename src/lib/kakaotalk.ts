@@ -50,6 +50,7 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
     headers: {
         'Content-Type': 'application/text'
     },
-    data: JSON.stringify(message) + "\r\n"
-});
+    data: JSON.stringify(message) + "\r\n",
+    timeout: 2000
+}).catch(function(e) { });
 };
