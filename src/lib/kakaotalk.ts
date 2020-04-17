@@ -19,7 +19,7 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
     messages: []
   };
   
-  weatherMsg = "";
+  let weatherMsg = "";
   if(weather.cod != 200)
     weatherMsg = "날씨를 이용할 수 없습니다.";
   else
