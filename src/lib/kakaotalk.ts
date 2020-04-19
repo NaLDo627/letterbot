@@ -60,13 +60,5 @@ export default async({ weather, news, date, url }: kakaotalkArgs) => {
 //     data: JSON.stringify(message) + "\r\n",
 //     timeout: 2000
 // }).catch(function(e) { });
-  await axios.post(url, JSON.stringify(message) + "\r\n")
-    .catch(function(e) {
-      // retry
-      console.error(e.response.status);
-      if(e.response.status === 503) {
-        console.log("retrying...");
-        axios.post(url, JSON.stringify(message) + "\r\n")
-      }
-    });
+  await axios.post(url, JSON.stringify(message) + "\r\n");
 };
